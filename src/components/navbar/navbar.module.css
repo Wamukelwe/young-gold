@@ -1,0 +1,37 @@
+.container{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-weight: bold;
+    font-size: 22px;
+
+}
+
+.links{
+    display: flex;
+    align-items: center;
+    gap: 20px
+}
+.link {
+    color: lightgrey; /* Default link color */
+    transition: color 0.3s; /* Add a smooth color transition effect */
+  }
+  
+  .link:hover {
+    color: #53c28b; /* Change link color when hovering */
+  }
+  
+
+.logout{
+    padding: 5px;
+    border: none;
+    background-color: #53c28b;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+
+}

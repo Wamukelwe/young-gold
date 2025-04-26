@@ -1,0 +1,34 @@
+/* ContactPage.module.css */
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid green;
+  border-radius: 5px;
+  background-color: green;
+  text-align: center;
+}
+
+.h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.contactList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contactList li {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+/* Add additional styles as needed */
