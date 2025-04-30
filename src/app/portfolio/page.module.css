@@ -1,14 +1,69 @@
-.mainTitle {
+.container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px 20px;
+    gap: 100px;
+    flex-direction: column;
+  }
+  
+  .item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    min-width: 300px;
+    max-width: 500px;
+    border: 5px solid #bbb;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .item:nth-child(1) {
+    background-image: url("/illustration.png");
+  }
+  
+  .item:nth-child(2) {
+    background-image: url("/Projects.png");
+  }
+  
+  .item:nth-child(3) {
+    background-image: url("/Program.png");
+  }
+  
+  .item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .title {
+    font-size: 72px;
+    background: linear-gradient(to bottom, #194c33, #FFD700);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  }
+  
+  .title:hover {
+    color: #53c28b;
+  }
+  
+  .mainTitle {
     font-size: 100px;
     text-align: center;
     margin-top: 20px;
-  }
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
   }
   
   .selectTitle {
@@ -24,53 +79,39 @@
     justify-content: center;
   }
   
-  .item {
-    border: 5px solid #bbb;
-    width: 300px;
-    height: 400px;
-    position: relative;
-    background-color: #eee;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    overflow: hidden;
+  .img {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+    animation: move 3s infinite ease alternate;
+    border-radius: 10px;
   }
   
-  /* Background images for each item */
-  .item:nth-child(1) {
-    background-image: url("/illustration.png");
+  .desc {
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 1.4;
+    text-align: center;
   }
   
-  .item:nth-child(2) {
-    background-image: url("/Projects.png");
+  /* Floating animation */
+  @keyframes move {
+    from {
+      transform: translateY(-10px);
+    }
+    to {
+      transform: translateY(10px);
+    }
   }
   
-  .item:nth-child(3) {
-    background-image: url("/Program.png");
-  }
-  
-  .title {
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-    font-size: 40px;
-    font-weight: bold;
-    color: white;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-  }
-  
-  .item:hover .title {
-    color: #53c28b;
-  }
-  
-  .item:hover {
-    transform: translateY(-5px);
-  }
-  
-  /* === Mobile responsive styles === */
+  /* 📱 Responsive styling for tablets */
   @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      gap: 50px;
+      padding: 20px;
+    }
+  
     .mainTitle {
       font-size: 50px;
       text-align: center;
@@ -95,6 +136,29 @@
   
     .title {
       font-size: 28px;
+    }
+  
+    .img {
+      height: 300px;
+    }
+  
+    .desc {
+      font-size: 20px;
+    }
+  }
+  
+  /* 📱 Extra small screens (like iPhone SE) */
+  @media (max-width: 480px) {
+    .title {
+      font-size: 36px;
+    }
+  
+    .img {
+      height: 250px;
+    }
+  
+    .desc {
+      font-size: 18px;
     }
   }
   
