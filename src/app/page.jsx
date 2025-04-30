@@ -1,22 +1,36 @@
-import Image from 'next/image'
-import styles from './page.module.css'
-import GP from 'public/young_gp.png'
-import Button from '@/components/Button/Button'
+"use client"
 
-export default function Home() {
+import React from 'react'
+import styles from './page.module.css'
+import Link from 'next/link'
+
+const Portfolio = () => {
   return (
-  <div className={styles.container}>
-  <div className={styles.item}>
-    <h1 className ={styles.title}>Better tomorrow for all</h1>
-    <p className={styles.desc}>
-      We strive to keep our communities clean and create a safe haven for our youth. Proctect the Earth and ensure a better for tomorrow
-    </p>
-    <Button url="/portfolio" text="See our work"/>
+    <div className={styles.container}>
+      <h1 className={styles.selectTitle}>Choose a gallery</h1>
+      <div className={styles.items}>
+        <Link href="/portfolio/illustrations" legacyBehavior>
+          <a className={styles.item}>
+            <span className={styles.title}>Illustrations</span>
+          </a>
+        </Link>
+
+        <Link href="/portfolio/Projects" legacyBehavior>
+          <a className={styles.item}>
+            <span className={styles.title}>Projects</span>
+          </a>
+        </Link>
+
+        <Link href="/portfolio/Programmes" legacyBehavior>
+          <a className={styles.item}>
+            <span className={styles.title}>Programmes</span>
+          </a>
+        </Link>
+      </div>
     </div>
-    <div className={styles.item}>
-    <Image src={GP} alt="" className={styles.img} />
-      </div> 
-    
-  </div>
   )
 }
+
+export default Portfolio
+
+
