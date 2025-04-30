@@ -1,9 +1,61 @@
+/* 📱 Responsive styling for tablets and phones */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 50px;
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+
+  .img {
+    height: 300px;
+  }
+
+  .desc {
+    font-size: 20px;
+  }
+
+  .items {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .item {
+    width: 90vw;
+    max-width: 350px;
+    height: 250px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 36px;
+  }
+
+  .img {
+    height: 250px;
+  }
+
+  .desc {
+    font-size: 18px;
+  }
+}
+
 .container {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   gap: 100px;
-  justify-content: center;
-  padding: 40px 20px;
+  justify-content: center; /* center items on small screens */
+  padding: 40px 20px; /* safe padding around content */
   flex-direction: column;
 }
 
@@ -12,8 +64,8 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
-  min-width: 300px;
-  max-width: 500px;
+  min-width: 300px; /* make sure items don't become too small */
+  max-width: 500px; /* optional: keep items from stretching too much */
   border: 5px solid #bbb;
   background-size: cover;
   background-position: center;
@@ -68,51 +120,11 @@
   text-align: center;
 }
 
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    gap: 50px;
+@keyframes move {
+  from {
+    transform: translateY(-10px);
   }
-
-  .title {
-    font-size: 48px;
-  }
-
-  .img {
-    height: 300px;
-  }
-
-  .desc {
-    font-size: 20px;
-  }
-
-  .items {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-  }
-
-  .item {
-    width: 90vw;
-    max-width: 350px;
-    height: 250px;
-  }
-
-  .title {
-    font-size: 28px;
-  }
-}
-
-@media (max-width: 480px) {
-  .title {
-    font-size: 36px;
-  }
-
-  .img {
-    height: 250px;
-  }
-
-  .desc {
-    font-size: 18px;
+  to {
+    transform: translateY(10px);
   }
 }
