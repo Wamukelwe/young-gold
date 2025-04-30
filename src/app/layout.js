@@ -1,32 +1,14 @@
-import Navbar from '@/components/navbar/Navbar'
-import Footer from '@/components/footer/Footer'
-import './globals.css'
-import { Inter, Roboto, Poppins } from 'next/font/google'
-import { ThemeProvider } from '@/context/ThemeContext'
+import React from 'react'
+import styles from './page.module.css'
 
-
-const inter = Inter({ subsets: ['latin'] })
-
-export const metadata = {
-  title: 'Young Gold Polisher',
-  description: 'This is the description',
+const Layout = ({children}) => {
+  return (
+    <div className={styles.layoutContainer}>
+      <h1 className={styles.mainTitle}>Our Works</h1>
+      {children}
+    </div>
+  )
 }
 
-export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>
-        <ThemeProvider>
-        
-        <div className= "container">
-       <Navbar/>
-        {children}
-        <Footer/>
-        </div>
-      
-        </ThemeProvider>
-      
-        </body>
-    </html>
-  )
+export default Layout
 }
