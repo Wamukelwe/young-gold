@@ -42,4 +42,7 @@ const Category = ({ params }) => {
 };
 
 export default Category;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0d547eada73e9069fb95cc5ff7d0c196c1d8ca29

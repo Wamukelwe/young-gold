@@ -30,6 +30,7 @@
   font-size: 16px;
   margin: 8px 0;
   word-break: break-word;
+<<<<<<< HEAD
 }
 
 /* Responsive design */
@@ -48,3 +49,24 @@
   }
 }
 
+=======
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .title {
+    font-size: 22px;
+  }
+
+  .subtitle,
+  .contactList li {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+}
+
+
+>>>>>>> 0d547eada73e9069fb95cc5ff7d0c196c1d8ca29
