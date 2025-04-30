@@ -1,40 +1,61 @@
+/* GLOBAL RESET */
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
+/* FULL PAGE SETTINGS */
 html,
 body {
+  width: 100%;
+  height: 100%;
   max-width: 100vw;
   overflow-x: hidden;
-  
+  scroll-behavior: smooth; /* smooth scroll for nice transitions */
 }
 
-a{
-  text-decoration :none;
+/* LINKS */
+a {
+  text-decoration: none;
   color: inherit;
 }
 
-.theme{
-transition: 1s all ease;
+/* THEME SYSTEM */
+.theme {
+  transition: 1s all ease;
 }
 
-.light{
+.light {
   background-color: white;
-  color:#111;
-}
-.dark{
-  background-color: #111;
-  color: #bbb
+  color: #111;
 }
 
-.container{
+.dark {
+  background-color: #111;
+  color: #bbb;
+}
+
+/* GLOBAL WRAPPER (previously container) */
+.wrapper {
   max-width: 1366px;
   min-height: 100vh;
   margin: 0 auto;
   padding: 0 60px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;  
+  justify-content: space-between;
+}
+
+/* GLOBAL IMAGE SETTINGS (optional for consistent images) */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* TEXT SELECTION STYLE (optional - looks professional) */
+::selection {
+  background: #ffd700; /* gold highlight when user selects text */
+  color: #111;
 }
