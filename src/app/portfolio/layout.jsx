@@ -3,9 +3,9 @@ import styles from './page.module.css'
 
 const Layout = ({children}) => {
   return (
-    <div>
+    <div className={styles.layoutContainer}>
       <h1 className={styles.mainTitle}>Our Works</h1>
-   {children}
+      {children}
     </div>
   )
 }

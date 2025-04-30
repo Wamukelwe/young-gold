@@ -1,44 +1,86 @@
-.container{
+.container {
   display: flex;
   align-items: center;
   gap: 100px;
+  flex-wrap: wrap; /* allow wrap on small screens */
+  justify-content: center; /* center items on small screens */
+  padding: 40px 20px; /* safe padding around content */
 }
 
-.item{
+.item {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 50px;
+  min-width: 300px; /* make sure items don't become too small */
+  max-width: 500px; /* optional: keep items from stretching too much */
 }
 
 .title {
   font-size: 72px;
   background: linear-gradient(to bottom, #194c33, #FFD700);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-align: center;
 }
 
-
-.img{
+.img {
   width: 100%;
   height: 500px;
   object-fit: contain;
   animation: move 3s infinite ease alternate;
-}
-@keyframes move{
-from{
-transform: translateY(-10px);
-}
-to{
-    transform: translateY(10px);
-}
+  border-radius: 10px; /* rounded corners */
 }
 
-
-
-.desc{
+.desc {
   font-size: 25px;
   font-weight: 300;
+  line-height: 1.4;
+  text-align: center;
 }
 
+/* Floating animation */
+@keyframes move {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(10px);
+  }
+}
 
+/* 📱 Responsive styling for tablets and phones */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+
+  .img {
+    height: 300px;
+  }
+
+  .desc {
+    font-size: 20px;
+  }
+}
+
+/* 📱 Extra small screens (like iPhone SE) */
+@media (max-width: 480px) {
+  .title {
+    font-size: 36px;
+  }
+
+  .img {
+    height: 250px;
+  }
+
+  .desc {
+    font-size: 18px;
+  }
+}

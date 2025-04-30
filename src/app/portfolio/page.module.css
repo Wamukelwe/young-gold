@@ -1,46 +1,100 @@
-.mainTitle{
-font: size 100px;
-}
-
-.container{
-
-}
-
-.selectTitle{
-margin: 20px 0px;
-}
-
-.items{
-display:flex;
-gap: 50px;
-}
-
-.item{
-border: 5px solid #bbb;
-width: 300px;
-height: 400px;
-position: relative;
-background-size: cover !important;
-}
-
-.item:nth-child(1){
-background: url("/illustration.png");
-}
-.item:nth-child(2){
-    background: url("/Projects.png");
+.mainTitle {
+    font-size: 100px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .selectTitle {
+    margin: 20px 0;
+    font-size: 24px;
+    font-weight: 500;
+  }
+  
+  .items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+  }
+  
+  .item {
+    border: 5px solid #bbb;
+    width: 300px;
+    height: 400px;
+    position: relative;
+    background-color: #eee;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+  }
+  
+  /* Background images for each item */
+  .item:nth-child(1) {
+    background-image: url("/illustration.png");
+  }
+  
+  .item:nth-child(2) {
+    background-image: url("/Projects.png");
+  }
+  
+  .item:nth-child(3) {
+    background-image: url("/Program.png");
+  }
+  
+  .title {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  }
+  
+  .item:hover .title {
+    color: #53c28b;
+  }
+  
+  .item:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* === Mobile responsive styles === */
+  @media (max-width: 768px) {
+    .mainTitle {
+      font-size: 50px;
+      text-align: center;
     }
- .item:nth-child(3){
- background: url("/Program.png");
-}   
-
-.title{
-position: absolute;
-right:10px;
-bottom: 10px;
-font-size: 40px;
-font-weight: bold;
-}
-
-.item:hover .title{
-color: #53c28b
-}
+  
+    .selectTitle {
+      font-size: 20px;
+      text-align: center;
+    }
+  
+    .items {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+  
+    .item {
+      width: 90vw;
+      max-width: 350px;
+      height: 250px;
+    }
+  
+    .title {
+      font-size: 28px;
+    }
+  }
+  

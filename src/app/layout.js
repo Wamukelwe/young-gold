@@ -1,9 +1,8 @@
-import Navbar from '@/components/navbar/Navbar'
-import Footer from '@/components/footer/Footer'
+import Navbar from '@/components/Navbar/Navbar'
+import Footer from '@/components/Footer/Footer'
 import './globals.css'
-import { Inter, Roboto, Poppins } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import { ThemeProvider } from '@/context/ThemeContext'
-
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,16 +16,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <ThemeProvider>
-        
-        <div className= "container">
-       <Navbar/>
-        {children}
-        <Footer/>
-        </div>
-      
+          <div className="container">
+            <Navbar />
+            {children}
+            <Footer />
+          </div>
         </ThemeProvider>
-      
-        </body>
+      </body>
     </html>
   )
 }

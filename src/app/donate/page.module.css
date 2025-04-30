@@ -1,33 +1,56 @@
 
 .container {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid green;
-    border-radius: 5px;
-    background-color: green;
-    text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid green;
+  border-radius: 5px;
+  background-color: green;
+  text-align: center;
+  color: white; /* Ensures text is visible on green background */
+}
+
+.imgContainer {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.desc {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.bankDetails {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.bankDetails p {
+  margin: 10px 0;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* Optional: Mobile adjustments */
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
   }
-  .imgContainer{
-    width: 100%;
-    height: 300px;
-    position: relative;
-    }
-    .img{
-    object-fit: cover;
-    }
-  
+
   .desc {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 20px;
   }
-  
-  .bankDetails {
-    text-align: left;
-    margin-top: 20px;
-  }
-  
+
   .bankDetails p {
-    margin: 10px 0;
+    font-size: 14px;
   }
-  
+}
